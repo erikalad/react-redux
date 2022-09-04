@@ -1,10 +1,24 @@
 .cnt {
     padding-top: 10px;
 }
+
+
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+    align-self: center;
+    margin-top: 100px;
+}
+
+
 .form-container {
     display:flex;
+    align-items: center;
     flex-direction: row;
-    align-items: flex-start;
 }
 
 .form-container button {
@@ -16,4 +30,61 @@
 
 .fav{
     margin-left: 50px;
+    background-color:#a4e16dbc ;
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+    color: white;
+    width: 60px;
 }
+
+.fav:hover{
+    background-color:#6d954abc ;
+    border-radius: 15px;
+    height: 30px;
+    color: black;
+}
+
+
+.buscar{
+    background-color:#a4e16dbc ;
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+    color: white;
+}
+
+.buscar:hover{
+    background-color:#6d954abc ;
+    border-radius: 15px;
+    height: 30px;
+    color: black;
+}
+
+.buscador{
+    border-radius: 10px;
+}
+
+.lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ced3dc65;
+}
+
+.boton-fav{
+    display: flex;
+    align-self: flex-start;
+    margin-top: 20px;
+    justify-content: flex-end;
+    margin-right: 20px;
+    
+}
+
+.items{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+

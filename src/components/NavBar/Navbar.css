@@ -3,7 +3,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #303236;
+    background-color: #ced3dc65;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,8 +40,16 @@
     border-bottom: 4px solid transparent;
 }
 
-.list-item a:hover,
+.list-item a:hover{
+    background-color: #a3e16da9;
+    color: black;
+    border-radius: 15px;
+    height: 15px;
+}
+
+
 .list-item a.active {
-    background-color: #808080;
+    background-color: #a4e16dbc;
     color: white;
+    border-radius: 15px;
 }

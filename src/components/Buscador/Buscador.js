@@ -25,12 +25,12 @@ export class Buscador extends Component {
   render() {
     const { title } = this.state;
     return (
-      <div>
-        <h2>Buscador</h2>
+      <div className="contenedor">
+        <h2 className="titulo">Buscador</h2>
         <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
           <div>
             <label className="label" htmlFor="title">Película: </label>
-            <input
+            <input className="buscador"
               type="text"
               id="title"
               autoComplete="off"
@@ -38,7 +38,7 @@ export class Buscador extends Component {
               value={title}
             />
           </div>
-          <button type="submit">BUSCAR</button>
+          <button type="submit" className="buscar">BUSCAR</button>
         </form>
         <ul>
          {/* Aqui tienes que escribir tu codigo para mostrar la lista de peliculas --
@@ -46,12 +46,16 @@ export class Buscador extends Component {
          que me lleve a su detalle y un botón que agregue a favoritas por cada peli.*/}
          {this.props.movies.map((movie) => {
            return (
-             <li key={movie.imdbID}>
+            <div className="lista">
+             <li key={movie.imdbID} className="items">
                <Link to={`/movie/${movie.imdbID}`}>{movie.Title}</Link>
-               <button onClick={()=>this.props.addMovieFavorite({title: movie.Title, id: movie.imdbID})} className="fav">
+             </li>
+             <p className="boton-fav">
+             <button onClick={()=>this.props.addMovieFavorite({title: movie.Title, id: movie.imdbID})} className="fav">
                  Fav
                </button> 
-             </li>
+               </p>
+              </div>
            )
          })}
         </ul>
