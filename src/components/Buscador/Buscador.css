@@ -28,18 +28,15 @@
     padding-right: 10px;
 }
 
-.fav{
+#fav{
     margin-left: 50px;
-    background-color:#a4e16dbc ;
-    border-radius: 15px;
     border: none;
     height: 30px;
-    color: white;
     width: 60px;
 }
 
 .fav:hover{
-    background-color:#6d954abc ;
+    background-color:#6d954a5a ;
     border-radius: 15px;
     height: 30px;
     color: black;
@@ -65,26 +62,77 @@
     border-radius: 10px;
 }
 
-.lista{
+.lista {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #ced3dc65;
 }
 
-.boton-fav{
+.card {
     display: flex;
-    align-self: flex-start;
-    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
     justify-content: flex-end;
-    margin-right: 20px;
-    
+    align-self: center;
+    margin-top:50px;
+    border: none
 }
 
-.items{
+
+
+
+
+#carta {
+    align-content: flex-start;
+    margin-top: 10px;
+
+}
+
+
+.card-title{
+    text-decoration:none ;
+    color: black;
+    cursor: pointer;
+}
+
+.label {
+    margin-top: 6px;
+}
+
+
+.col-sm-3{
     display: flex;
-    margin-left: 20px;
-    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 5px 5px 11px #aaaaaa, -5px -5px 11px #ffffff;
+    border-radius: 100px;
+    border: 2px solid rgba(158, 158, 158, 0.189);
+    height: auto;
+    width: auto;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-right: 5px;
+
 }
 
+.col-sm-3:hover{
+    color:#1c3643;
+}
 
+.row {
+    display: flex;
+    justify-content: center;
+   padding:30px;
+}
+
+#boton {
+    border-radius: 50px;
+    height: 40px;
+    width: auto;
+    height: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 0;
+}
