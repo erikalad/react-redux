@@ -7,6 +7,8 @@ import { Route } from "react-router-dom";
 import Movie from "./components/Movie/Movie";
 import Carrousel from "./components/Carrousel/Carrousel";
 import Footer from "./components/Footer/Footer";
+import Contactarme from "./components/Contactame/Contactame";
+import Recursos from "./components/Recursos/Recursos";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           </Route>
           <Route path="/favs" component={Favorites} />
           <Route path="/movie/:aux" component={Movie} />
+          <Route path="/contactarme" component={Contactarme} />
+          <Route path="/recursos" component={Recursos} />
           <Footer />
       </React.Fragment>
   );

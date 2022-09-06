@@ -14,14 +14,15 @@ class Movie extends React.Component {
 
     render() {
         return (
-            <div className="movie-detail">
-                Detalle de la pelicula  
-                <h2>{`Título: ${this.props.movies.Title}`}</h2>
-                <img src={this.props.movies.Poster} alt="Img not found"/>
+            <div className="movie-detail"> 
+                <h2>{this.props.movies.Title}</h2>
+                <img className="rounded-2" src={this.props.movies.Poster} alt={this.props.movies.Title}/>
+                <div id='contenedor'>
                 <h4>{`Año: ${this.props.movies.Year}`}</h4>
                 <h4>{`Duración: ${this.props.movies.Runtime}`}</h4>
                 <h4>{`Elenco: ${this.props.movies.Actors}`}</h4>
-                <h4>{`Director: ${this.props.movies.Director}`}</h4>
+                <h4>{`Director/es: ${this.props.movies.Director}`}</h4>
+                </div>
             </div>
         );
     }

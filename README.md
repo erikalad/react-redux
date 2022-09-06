@@ -1,3 +1,25 @@
+
+# BUSCADOR DE PELICULAS
+
+El Buscador de peliculas es un proyecto realizado en Henry en donde lo personifique de la siguiente forma:
+
+-Dandole estilos propios.
+-Creando un footer con dos navegaciones mas donde se va a poder visualizar
+    -Un formulario.
+    -Una pagina de recursos utilizados con iconos modificados con css puro.
+    -Un link a mi github para que puedan ver este repositorio.
+
+
+Espero que les guste.
+
+Con amor ♥
+
+Eri Ladner
+
+
+
+
+
 # Redux OMDB APP
 
 En este ejercicio vamos a crear una APP que utilice la API de [OMDB](http://www.omdbapi.com/). Vamos a crear nuestra app utilizando __REACT__ y __REDUX__.

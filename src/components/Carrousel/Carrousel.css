@@ -4,9 +4,6 @@
     filter: grayscale(50%)
 }
 
-#carousel {
-    position:relative;
-}
 
 #carousel .overlay {
     position: absolute;

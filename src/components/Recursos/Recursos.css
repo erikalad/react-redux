@@ -1,0 +1,35 @@
+.contenedor-iconos{
+    display: flex;
+    flex-direction: column;
+    margin:10%;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 250px;
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.icon{
+    margin:15px;
+    font-size: 50px;
+}
+
+#bo{
+    color:blueviolet;
+}
+
+#react{
+    color:rgb(63, 7, 116);
+}
+
+#redux{
+    color:rgb(63, 7, 116);
+}
+
+#css{
+    color:blue;
+}

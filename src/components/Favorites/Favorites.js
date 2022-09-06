@@ -9,19 +9,19 @@ export class ConnectedList extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Películas Favoritas</h2>
-        <ul>
-          {/* Aqui deberias poner tu lista de peliculas! */}
+      <div className="contenedor" id="contenedor-favoritos">
+        <h2>Mi lista</h2>
+        <div  id="favoritos">
           {this.props.movies?.map((movie) => {
             return (
-              <div key={movie.id}>
-                <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
-                <button onClick={() => this.props.removeMovieFavorite(movie.id)} >X</button>
+              <div key={movie.id} className="card" id="carta-favorita">
+                <button onClick={() => this.props.removeMovieFavorite(movie.id)} className="btn btn-danger">X</button>
+                <img src={movie.poster} alt={movie.title} className="card-img-top" />
+                <Link to={`/movie/${movie.id}`} className="card-title">{movie.title}</Link>
               </div>
             )
           })}
-        </ul>
+        </div>
       </div>
     );
   }

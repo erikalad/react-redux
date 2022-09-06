@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import './Footer.css';
 
 export default function Footer(){
@@ -6,11 +7,12 @@ export default function Footer(){
     <footer id="footer" class="pb-4 pt-4" >
             <div class="row text-center">
                 <div class="col-12 col-lg">
-                    <a href="#">Sobre Mi</a>
+                <Link to="/recursos">Recursos</Link>
                 </div>
                 <div class="col-12 col-lg">
-                    <a href="#">Contactame</a>
+                <Link to="/contactarme">Contactarme</Link>
                 </div>
+                <div className="yo">by Erika Ladner</div>
             </div>
     </footer>
     )

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
+import { BsSuitHeart , BsInfoCircleFill , BsHandIndexThumb} from "react-icons/bs";
 import './Buscador.css';
 //importo las actions
 import { addMovieFavorite, getMovies } from "../../actions"
@@ -25,31 +26,30 @@ export class Buscador extends Component {
   render() {
     const { title } = this.state;
     return (
-      <div className="card">
+      <div className="card" id="buscador">
         <h2 className="titulo">Buscador</h2>
             <form className="d-flex" role="search" onSubmit={(e) => this.handleSubmit(e)}>
             <label className="label" htmlFor="title">Película: </label>
-                <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"  onChange={(e) => this.handleChange(e)}
+                <input className="form-control me-2" type="search" placeholder="Nombre de la pelicula.." aria-label="Search"  onChange={(e) => this.handleChange(e)}
               value={title}/>
-                <button className="btn btn-outline-success" type="submit">Buscar</button>
+                <button className="btn btn-outline-success" id="buscar" type="submit">Buscar <BsHandIndexThumb /></button>
             </form>
-        <ul className="row">
-         {/* Aqui tienes que escribir tu codigo para mostrar la lista de peliculas --
-         voy a mapear mi estado donde están las películas y renderizaré un li con un Link
-         que me lleve a su detalle y un botón que agregue a favoritas por cada peli.*/}
+        <div className="contenedor-cartas">
          {this.props.movies.map((movie) => {
            return (
-            <div className="col-sm-3">
-             <li key={movie.imdbID} className="card" id="carta">
-               <Link to={`/movie/${movie.imdbID}`} className="card-title">{movie.Title}</Link>
-             </li>
-             <button onClick={()=>this.props.addMovieFavorite({title: movie.Title, id: movie.imdbID})} className="btn btn-success" id="boton">
-                 Fav
+            <div className="card" id="carta-individual">
+             <div key={movie.imdbID} className="card-body" id="carta">
+              <img src={movie.Poster} alt={movie.Title} className="card-img-top" />
+              </div>
+               <Link to={`/movie/${movie.imdbID}`} className="card-title">{movie.Title}<BsInfoCircleFill /></Link>
+             
+             <button onClick={()=>this.props.addMovieFavorite({title: movie.Title, id: movie.imdbID, poster: movie.Poster})} className="btn btn-primary" id="boton">
+             <BsSuitHeart />
                </button> 
               </div>
            )
          })}
-        </ul>
+        </div>
       </div>
     );
   }
