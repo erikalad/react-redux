@@ -9,4 +9,11 @@
 
 .yo{
     color: white;
+    margin-right:  15px;
+}
+
+.git{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
