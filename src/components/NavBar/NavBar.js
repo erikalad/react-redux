@@ -5,7 +5,7 @@ import './Navbar.css';
 
 export default function NavBar() {
     return (
-        <nav className="navbar navbar-expand-lg bg-light" id="nav">
+        <nav className="navbar navbar-expand-lg bg-light sticky-top" id="nav">
             <div className="container-fluid">
             <a id="contenedor-logo" className="navbar-brand" href="#">
                 <img className="logo" src={Logo} alt="logo"/><p id="logo-letras">Buscador de Peliculas</p>
